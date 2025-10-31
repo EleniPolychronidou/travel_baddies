@@ -1,0 +1,101 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .header {
+        overflow: hidden;
+        background-color: #A16E83;
+        padding: 20px 20px;
+}
+    nav a{
+        text-decoration: none;
+        color:#19181A;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+    }
+
+    .nav-button {
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .nav-button:hover {
+        box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+        transition-duration: 0.2s;
+        padding: 2px 4px;
+        background-color: #eee;
+        border-radius: 8px;
+        border-top:  rgba(255, 255, 255, 0.3);
+    }
+
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .contents {
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+        gap: 50px; 
+    }
+    
+    .contents-items {
+        display: flex;
+        padding: 10px 20px;
+        list-style-type: none;
+        background-color: #eee;
+        border-radius: 12px;
+        gap: 40px;
+    }
+
+    .title { 
+        font-family: Merriweather, Poppins;
+        font-size: 32px;
+    }
+
+    .auth {
+            display: flex;
+            gap: 12px;
+    }
+
+    .login-button , .signup-button {
+        padding: 8px 12px;
+        border-radius: 12px;
+        background-color: #fff;
+    }
+
+    .login-button:hover , .signup-button:hover {
+        box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+    }
+
+  footer {
+    background-color: #19181A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top:auto
+  }
+
+  footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
