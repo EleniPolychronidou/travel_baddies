@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
 
-    <title>Travel Buddy</title>
+        <title>Travel Buddy</title>
   </head>
-  <body>
+  <body class="home-page">
     <header class="header">
       <nav class="nav-container">
         <div class="title">Travel Buddy</div>
@@ -20,10 +24,10 @@
               <a href="home.html">Home</a>
             </li>
             <li class="nav-button">
-              <a href="destinations.html">Suggest a Trip</a>
+              <a href="suggestatrip.html">Suggest a Trip</a>
             </li>
             <li class="nav-button">
-              <a href="bookings.html">Find a Trip</a>
+              <a href="findatrip.html">Find a Trip</a>
             </li>
             <li class="nav-button">
               <a href="contact.html">Contact Us</a>
@@ -36,6 +40,66 @@
         </div>
       </nav>
     </header>
+    
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="text">
+      <h2>Find your next travel buddy</h2>
+      <p class="description">Join trips, meet people, and explore new destinations together.</p>
+      <div class="buttons">
+        <a href="#" class="btn">Suggest a Trip</a>
+        <a href="#" class="btn">Find a Trip</a>
+      </div>
+    </div>
+  </div>
+</section>
+      
+
+<!-- Ratings Section -->
+<section class="ratings-section">
+  <h2>What Our Users Say </h2>
+
+  <div class="ratings-container">
+    <div class="rating-card">
+      <div class="stars">★★★★★</div>
+      <p>"I met my now-best friend through Travel Buddy — we connected in the chat and ended up exploring Bali together!"</p>
+      <div class="user-info">
+        Sarah W.
+        <span>Traveled to Bali</span>
+      </div>
+    </div>
+
+    <div class="rating-card">
+      <div class="stars">★★★★★</div>
+      <p>"Found two amazing people to backpack across Europe with. The chat made planning and meeting up super easy!"</p>
+      <div class="user-info">
+        David L.
+        <span>Backpacked through Europe</span>
+      </div>
+    </div>
+
+    <div class="rating-card">
+      <div class="stars">★★★★☆</div>
+      <p>"Matched with great travel buddies for my Japan trip. The chat helped us plan meetups and share tips on the go!"</p>
+      <div class="user-info">
+        Alicia K.
+        <span>Visited Japan</span>
+      </div>
+    </div>
+
+    <div class="rating-card">
+      <div class="stars">★★★★★</div>
+      <p>"We met another couple through Travel Buddy’s chat before our Italy trip — sharing the journey made it unforgettable!"</p>
+      <div class="user-info">
+        Mark & Emily
+        <span>Traveled to Italy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
     <footer>
       <div>
         <p>© 2025 TravelBuddy</p>
@@ -48,5 +112,6 @@
         <a href="/trips">Upcoming Trips</a>
       </nav>
     </footer>
-  </body>
+
+</body>
 </html>

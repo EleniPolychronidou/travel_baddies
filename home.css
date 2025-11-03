@@ -1,0 +1,133 @@
+/* home page*/
+  .home-page .header {
+      background-color: transparent;
+
+  }
+
+  .home-page {
+      position: relative;
+      background: url('mountain.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40vh 60px 40px;
+  }
+
+  .home-page .container {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+  }
+
+  h2 {
+      font-family: "Onest", sans-serif;
+      font-size: 40px;
+      margin-bottom: 10px;
+  }
+
+  .description {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      margin-top: 10px;
+      color: #555;
+  }
+
+  .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #48869c;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+      background-color: #3a6d80;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .ratings-section {
+      padding: 50px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+
+  }
+
+  .ratings-section h2 {
+      margin-bottom: 30px;
+      font-family: "Albert Sans", sans-serif;
+  }
+
+  .ratings-container {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow-x: auto;
+      padding: 20px 10px;
+      scroll-snap-type: x mandatory;
+  }
+
+  .rating-card {
+      min-width: 280px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+  }
+
+  .rating-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .stars {
+      color: #ffd700;
+      font-size: 24px;
+      margin-bottom: 15px;
+  }
+
+  .rating-card p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.5;
+  }
+
+  .user-info {
+      font-weight: 600;
+      color: #48869c;
+  }
+
+  .user-info span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+  }

@@ -31,11 +31,11 @@
     }
     
     .nav-button:hover {
-        box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.218);
         transition-duration: 0.2s;
-        padding: 2px 4px;
+        padding: 1px 2px;
         background-color: #eee;
-        border-radius: 8px;
+        border-radius: 6px;
         border-top:  rgba(255, 255, 255, 0.3);
     }
 
@@ -68,7 +68,7 @@
     }
 
     .auth {
-            display: flex;
+        display: flex;
             gap: 12px;
     }
 
