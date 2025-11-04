@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* 
+
+{
+        margin: 0;
+        padding: 0;
+    }
+
+   body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+    background: #f9f9f9; 
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+form{
+  margin: 50px auto 0 auto; 
+  max-width: 1000px;
+  width: 80%;
+  padding: 20px 15px;
+  background-color: #e6eff2;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;         /* γεμίζει το form */
+  margin-bottom: 15px; /* μικρά κενά μεταξύ στοιχείων */
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100%;
+ width: 100%;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        border-color: linear-gradient(90deg, var(#5680E9), var(#8860D0));
+}
+
+      
+      
+      
+      
+
+
+    .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 1;
+        letter-spacing: 0.05em;
+
+    }
+
+    .subtitle {
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        color: #ffffff;
+        margin: 4px 0 0 4px; 
+        font-weight: 200;
+        letter-spacing: 0.02em;
+    }
+
+
+    .header {
+        overflow: hidden;
+        background: linear-gradient(to bottom right, #8860D0,#5AB9EA);
+        height: 150px;
+        color: linear-gradient(90deg, var(#5680E9), var(#8860D0));
+    
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin:0;
+        width: 100%;
+        max-width: none;
+        font-family: 'Poppins', sans-serif;
+}
+    nav a{
+        text-decoration: none;
+        color: #5680E9, #5AB9EA;
+        background-color:  #5680E9, #5AB9EA;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+    }
+    nav a:hover {
+        text-decoration: none;
+        color: #5AB9EA;
+    }
+
+    .nav-button {
+        display: flex; 
+        justify-content: center;
+        border-radius: 4px;
+        text-align: center;
+        align-items: center; 
+        border-radius: 4px;
+        vertical-align: middle;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .nav-button:hover {
+        box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+        transition-duration: 0.2s;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        align-items: center; 
+        vertical-align: middle; 
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        border-top:  rgba(86, 128, 233, 0.3);
+    }
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 30px;
+
+    }
+    .logo {
+        display: flex;
+        flex-direction: column; 
+        align-items: left;
+        text-align: left;
+        gap: 1px;
+        padding: 20px;
+    }
+
+    .contents-items {
+        display: flex;
+        align-items: center;
+        padding: 15px 25px;
+        border-radius: 12px;
+        background-color:#5680E9, #5AB9EA;
+        gap: 40px;
+        width: 80%; 
+        font-weight: 500;
+        letter-spacing: 0.03em;
+    }
+
+
+    .title { 
+        font-family: Merriweather, Poppins;
+        font-size: 32px;
+        gap: 0,5px;
+    }
+
+    .auth {
+            display: flex;
+            gap: 12px;
+            width: 400px;
+            height: 50px;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+    }
+
+    .login-button , .signup-button {
+        padding: 8px 12px;
+        border-radius: 12px;
+        background-color: #fff;
+    }
+
+    .login-button:hover , .signup-button:hover {
+        box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+    }
+
+  footer {
+    background-color: #19181A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top:auto
+  }
+
+  footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  footer a:hover {
+    color: #fff;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
+body, .subtitle, .contents, nav a {
+    letter-spacing: 0.03em; 
+    line-height: 1.5; 
+    font-weight: 400;} 
+
+
+
+.login-button, .signup-button, .nav-button {
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+h2 {
+      text-align: center;
+      color: #5680E9;
+      font-size: 15;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      text-align: center;
+      color: white;
+    }
+
+    
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #5680E9;
+        margin-bottom: 16px;
+        font-size: 14px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        border-color: linear-gradient(90deg, var(#5680E9), var(#8860D0));
+    
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #5680E9, #8860D0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    select {
+    background: white; 
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    }
+
+select:focus {
+    outline: none;
+    background: linear-gradient(90deg, #5680E9, #8860D0); 
+    box-shadow: 0 0 10px #5680E9;
+    color: white;
+}
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #5680E9, #8860D0);
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #5680E9;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+}
+ .options div:hover {
+  background: linear-gradient(90deg, #8860D0, #5680E9);
+}
+.options div {
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+
