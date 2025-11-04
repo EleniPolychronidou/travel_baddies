@@ -1,2 +1,2 @@
 # travel_baddies
-Travel Buddy is an app where a traveler can find other people and make trips with them.
+It's always better with more people
