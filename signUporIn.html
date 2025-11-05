@@ -152,19 +152,21 @@
 </head>
 <body>
 
+    <!--Είναι φτωχικό αλλά μου έφαγαν την ζωή και όλες τις δωρεάν προσπάθειες του τσατ αυτά τα κουμπιά-->
   <div class="container-wrapper">
     <div class="left-panel">
       <h1>Travel Buddy</h1>
-      <p>Γίνε μέλος της κοινότητάς μας, γνώρισε νέους ανθρώπους και οργάνωσε τις επόμενες διακοπές σου!</p>
+      <p>Join our community and meet new people to travel with!</p>
+      <p>Remember: It's always better with more people!</p>
     </div>
 
     <div class="auth-container">
       <ul class="nav nav-tabs justify-content-center mb-3" id="authTabs" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Σύνδεση</button>
+          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Sign In</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab">Εγγραφή</button>
+          <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab">Register</button>
         </li>
       </ul>
 
@@ -178,11 +180,11 @@
             </div>
 
             <div class="mb-3 text-start">
-              <label for="loginPassword" class="form-label">Κωδικός <span class="required">*</span></label>
+              <label for="loginPassword" class="form-label">Password <span class="required">*</span></label>
               <input type="password" class="form-control" id="loginPassword" name="password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Σύνδεση</button>
+            <button type="submit" class="btn btn-primary w-100">Sign In</button>
           </form>
         </div>
 
@@ -190,7 +192,7 @@
         <div class="tab-pane fade" id="signup" role="tabpanel">
           <form id="signupForm" method="post" action="/signup" novalidate>
             <div class="mb-3 text-start">
-              <label for="name" class="form-label">Όνομα <span class="required">*</span></label>
+              <label for="name" class="form-label">Name <span class="required">*</span></label>
               <input type="text" class="form-control" id="name" name="name" required>
             </div>
 
@@ -200,38 +202,41 @@
             </div>
 
             <div class="mb-3 text-start">
-              <label for="signupPassword" class="form-label">Κωδικός <span class="required">*</span></label>
+              <label for="signupPassword" class="form-label">Password <span class="required">*</span></label>
               <input type="password" class="form-control" id="signupPassword" name="password" required minlength="6">
             </div>
 
             <div class="mb-3 text-start">
-              <label for="signupPasswordConfirm" class="form-label">Επιβεβαίωση Κωδικού <span class="required">*</span></label>
+              <label for="signupPasswordConfirm" class="form-label">Password Confirmation <span class="required">*</span></label>
               <input type="password" class="form-control" id="signupPasswordConfirm" required minlength="6">
             </div>
 
             <!-- Ενδιαφέροντα (με click επιλογές) -->
             <div class="mb-3 text-start">
-              <label class="form-label">Ενδιαφέροντα</label>
+              <label class="form-label">Interests</label>
               <div class="interests-list">
-                <div class="interest-option">Χορός</div>
-                <div class="interest-option">Αθλητισμός</div>
-                <div class="interest-option">Ιστορία</div>
-                <div class="interest-option">Ταινίες</div>
+                <div class="interest-option">Fitness &amp; Sports</div>
+                <div class="interest-option">Dancing</div>
+                <div class="interest-option">History</div>
+                <div class="interest-option">Movies</div>
                 <div class="interest-option">Coding</div>
-                <div class="interest-option">Μουσική</div>
-                <div class="interest-option">Θέατρο</div>
-                <div class="interest-option">Φαγητό &amp; Γαστρονομία</div>
-                <div class="interest-option">Πολιτισμός</div>
-                <div class="interest-option">Ανάγνωση βιβλίων</div>
+                <div class="interest-option">Music</div>
+                <div class="interest-option">Theater</div>
+                <div class="interest-option">Foodie</div>
+                <div class="interest-option">Culture</div>
+                <div class="interest-option">Parties</div>
+                <div class="interest-option">Reading</div>
+                <div class="interest-option">Cars</div>
+                <div class="interest-option">Fashion</div>
               </div>
               <input type="hidden" id="interestsInput" name="interests">
             </div>
 
-            <button type="submit" class="btn btn-success w-100">Εγγραφή</button>
+            <button type="submit" class="btn btn-success w-100">Sign Up</button>
           </form>
               <div class="mt-4 text-muted small">
-        Έχεις ήδη λογαριασμό; 
-        <a href="#" class="link-primary" onclick="document.querySelector('#login-tab').click(); return false;">Συνδέσου εδώ</a>.
+        Already a member?
+        <a href="#" class="link-primary" onclick="document.querySelector('#login-tab').click(); return false;">Sign In</a>.
       </div>
     </div>
   </div>
