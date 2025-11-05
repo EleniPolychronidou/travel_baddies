@@ -1,64 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>HELP PAGE</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      font-family: Arial, sans-serif;
+      margin: 0;
       background-color: #e6eff2;
     }
 
-    .header {
-      overflow: hidden;
-      background-color: #A16E83;
-      padding: 20px 20px;
+    header {
+      background-color: #0077B6;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
 
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .title {
-      font-family: Merriweather, Poppins;
-      font-size: 32px;
-      color: #19181A;
-    }
-
-    .contents {
-      display: flex;
-      font-size: 18px;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .contents a {
-      text-decoration: none;
-      color: #19181A;
-    }
-
-    .nav-button {
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .nav-button:hover {
-      box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.218);
-      transition-duration: 0.2s;
-      padding: 1px 2px;
-      background-color: #eee;
-      border-radius: 6px;
+    footer {
+      background-color: #312D2B;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
     }
 
     .container {
@@ -142,65 +106,65 @@
     button.submit:hover {
       background-color: #005f94;
     }
-
-    footer {
-      background-color: #312D2B;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: auto;
-    }
-
-    footer a {
-      color: #bbb;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="nav-container">
-      <h1 class="title">LET'S TRAVEL!</h1>
-      <nav class="contents">
-        <a href="#" class="nav-button">Home</a>
-        <a href="#" class="nav-button">Trips</a>
-        <a href="#" class="nav-button">Help</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Help Page</h1>
   </header>
 
   <div class="container">
+
     <h2>Frequently Asked Questions</h2>
 
     <div class="faq">
       <button class="question">How do I access the system?</button>
-      <div class="answer">To create an account, select Sign up.</div>
+      <div class="answer">
+        To create an account, select Sign up.
+      </div>
     </div>
 
     <div class="faq">
       <button class="question">How do I log in to my account?</button>
-      <div class="answer">Enter your username and your password in the login form.</div>
+      <div class="answer">
+        Enter your username and password in the login form.
+      </div>
     </div>
 
     <div class="faq">
       <button class="question">How do I create a trip?</button>
-      <div class="answer">Fill in the required details in the Make a Trip form. Once published, the trip becomes visible to the community.</div>
+      <div class="answer">
+        Fill in the required details in the Make a Trip form. Once published, it becomes visible to the entire community.
+      </div>
     </div>
 
     <div class="faq">
-      <button class="question">How can I report a user action?</button>
-      <div class="answer">You can report inappropriate actions through the report section in your account.</div>
+      <button class="question">How can I report a user's action?</button>
+      <div class="answer">
+        You can report inappropriate actions through the report system in your account.
+      </div>
     </div>
 
     <div class="faq">
-      <button class="question">My problem isn't listed. What can I do?</button>
-      <div class="answer">You can write your issue in the complaint box below.</div>
+      <button class="question">What happens if I start filling in information but something is missing?</button>
+      <div class="answer">
+        In case some information is missing, the already filled details are temporarily saved until the rest is completed. <strong>Attention! Do not delete the form.</strong>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="question">How can I join a group?</button>
+      <div class="answer">
+        Enter the 'Find a Trip' page and select a trip. Press "Apply" to join.
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="question">My problem is not listed. Where can I get help?</button>
+      <div class="answer">
+        You can submit your issue in the complaint form below.
+      </div>
     </div>
 
     <a class="download-link" href="odigies_xrisis.docx" download>Download full user instructions</a>
@@ -210,13 +174,15 @@
       <p>Write your problem or question here:</p>
       <form>
         <textarea placeholder="Type your message here..."></textarea>
+        <br>
         <button type="submit" class="submit">Submit</button>
       </form>
     </div>
+
   </div>
 
   <footer>
-    <p>© 2025 Let's Travel. All rights reserved.</p>
+    <p>© 2025 Help Page. All rights reserved.</p>
   </footer>
 
   <script>
@@ -234,4 +200,3 @@
 
 </body>
 </html>
-
