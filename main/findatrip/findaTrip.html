@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Find a Trip</title>
+    <link rel="stylesheet" href="../styleforcss/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <script>
+        fetch("../home/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("header").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      </script>
+    </header>
+
+    <p>
+      Are your suitcases ready? Let the adventure begin! <br />
+      These trips have been suggested by fellow travelers. <br />Choose the one
+      that best matches your interests and start your adventure!
+    </p>
+
+    <div class="filter-bar">
+      <select id="filterCountry">
+        <option value="">Country</option>
+      </select>
+      <input type="date" id="filterDate" />
+      <select id="filterType">
+        <option value="">Type</option>
+      </select>
+    </div>
+
+    <footer>
+      <script>
+        fetch("../home/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("footer").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+      </script>
+    </footer>
+  </body>
+</html>
