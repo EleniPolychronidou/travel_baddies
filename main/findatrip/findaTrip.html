@@ -1,48 +1,145 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Find a Trip</title>
-    <link rel="stylesheet" href="../styleforcss/style.css" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="findaTrip.css" />
+<link rel="stylesheet" href="../styleforcss/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<title>Find a Trip</title>
+</head>
+<body>
 
-  <body>
-    <header>
-      <script>
-        fetch("../home/header.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.querySelector("header").innerHTML = data;
-          })
-          .catch((error) => console.error("Error loading header:", error));
-      </script>
-    </header>
 
-    <p>
-      Are your suitcases ready? Let the adventure begin! <br />
-      These trips have been suggested by fellow travelers. <br />Choose the one
-      that best matches your interests and start your adventure!
-    </p>
+<header>
+<script>
+fetch('../home/header.html')
+.then(r => r.text())
+.then(data => document.querySelector('header').innerHTML = data)
+.catch(err => console.error('Error loading header:', err));
+</script>
+</header>
 
-    <div class="filter-bar">
-      <select id="filterCountry">
-        <option value="">Country</option>
-      </select>
-      <input type="date" id="filterDate" />
-      <select id="filterType">
-        <option value="">Type</option>
-      </select>
-    </div>
 
-    <footer>
-      <script>
-        fetch("../home/footer.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.querySelector("footer").innerHTML = data;
-          })
-          .catch((error) => console.error("Error loading footer:", error));
-      </script>
-    </footer>
-  </body>
+<main>
+<h2>Find a Trip</h2>
+
+
+<div class="search-bar">
+<input id="searchBar" type="text" placeholder="Search trips...">
+<button id="searchBtn">Search</button>
+</div>
+
+
+<div class="filters">
+<div class="filter-item">
+<label>Destination</label>
+<input id="filterDestination" type="text" placeholder=" Paris">
+</div>
+
+
+<div class="filter-item">
+<label>Purpose</label>
+<select id="filterPurpose">
+<option value="">Any</option>
+<option>Recreation</option>
+<option>Adventure</option>
+<option>Cultural</option>
+<option>Business</option>
+<option>Food & Wine</option>
+</select>
+</div>
+
+
+<div class="filter-item">
+<label>Budget (max €)</label>
+<input id="filterBudget" type="number" placeholder="300">
+</div>
+</div>
+
+
+<div id="tripGrid" class="trip-grid">
+<div class="tripCard">
+<h3>Weekend in Paris</h3>
+<p><strong>Destination:</strong> Paris, France</p>
+<p><strong>Purpose:</strong> Recreation</p>
+<p><strong>Budget:</strong> 400€</p>
+<button class="detailsBtn">View Details</button>
+</div>
+
+
+<div class="tripCard">
+<h3>Hiking in Norway</h3>
+<p><strong>Destination:</strong> Bergen, Norway</p>
+<p><strong>Purpose:</strong> Adventure</p>
+<p><strong>Budget:</strong> 650€</p>
+<button class="detailsBtn">View Details</button>
+</div>
+
+
+<div class="tripCard">
+<h3>Rome Cultural Tour</h3>
+<p><strong>Destination:</strong> Rome, Italy</p>
+<p><strong>Purpose:</strong> Cultural</p>
+<p><strong>Budget:</strong> 300€</p>
+<button class="detailsBtn">View Details</button>
+</div>
+</div>
+</main>
+
+
+<footer>
+<script>
+fetch('../home/footer.html')
+.then(r => r.text())
+.then(data => document.querySelector('footer').innerHTML = data)
+.catch(err => console.error('Error loading footer:', err));
+</script>
+</footer>
+
+
+<script>
+const searchBar = document.getElementById('searchBar');
+const searchBtn = document.getElementById('searchBtn');
+const filterDestination = document.getElementById('filterDestination');
+const filterPurpose = document.getElementById('filterPurpose');
+const filterBudget = document.getElementById('filterBudget');
+const tripGrid = document.getElementById('tripGrid');
+const tripCards = Array.from(tripGrid.getElementsByClassName('tripCard'));
+
+function filterTrips() {
+    const searchText = searchBar.value.toLowerCase();
+    const destinationText = filterDestination.value.toLowerCase();
+    const purposeValue = filterPurpose.value.toLowerCase();
+    const budgetValue = filterBudget.value ? parseFloat(filterBudget.value) : Infinity;
+
+    tripCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const destination = card.querySelector('p:nth-child(2)').textContent.toLowerCase();
+        const purpose = card.querySelector('p:nth-child(3)').textContent.toLowerCase();
+        const budgetText = card.querySelector('p:nth-child(4)').textContent.replace(/[^\d]/g, '');
+        const budget = parseFloat(budgetText);
+
+        const matchesSearch = title.includes(searchText) || destination.includes(searchText);
+        const matchesDestination = !destinationText || destination.includes(destinationText);
+        const matchesPurpose = !purposeValue || purpose.includes(purposeValue);
+        const matchesBudget = budget <= budgetValue;
+
+        if (matchesSearch && matchesDestination && matchesPurpose && matchesBudget) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+searchBtn.addEventListener('click', filterTrips);
+searchBar.addEventListener('keyup', e => {
+    if (e.key === 'Enter') filterTrips();
+});
+filterDestination.addEventListener('input', filterTrips);
+filterPurpose.addEventListener('change', filterTrips);
+filterBudget.addEventListener('input', filterTrips);
+</script>
+
+
+</body>
 </html>
