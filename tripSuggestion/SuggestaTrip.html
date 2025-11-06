@@ -11,6 +11,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="SuggestaTrip.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -20,40 +21,18 @@
     
   </head>
   <body>
-    <header class="header">
-      <nav class="nav-container">
-        <div class="logo">
-            <div class="title">Travel Buddy</div>
-            <div class="subtitle">It's always better <br> with more people</div>
-        </div>
+    <header>
+  <script>
 
-        
-            <div class="contents>"></div>
-            
-            <div class="contents-items">
-           
-                <li class="nav-button">
-                <a href="home.html">Home</a>
-                </li>
-                <li class="nav-button">
-                <a href="destinations.html">Suggest a Trip</a>
-                </li>
-                <li class="nav-button">
-                <a href="bookings.html">Find a Trip</a>
-                </li>
-                <li class="nav-button">
-                <a href="contact.html">Contact Us</a>
-                </li>
-         
-            </div>
+    fetch('../home/header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.querySelector('header').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
 
-            </div>
-        <div class="auth">
-            <div class="login-button"><a href="login.html">Log In</a></div>
-            <div class="signup-button"><a href="signup.html">Sign Up</a></div>
-        </div>
-      </nav>
-    </header>
+  </script>
+</header>
   
   <form id="newTripForm">
     <h2 style="margin-top:0;margin-bottom:6px">Suggest a new trip</h2>
@@ -103,6 +82,16 @@
   <script src="date.js"></script>
   <script src="confirmation.js"></script>
 
+ <footer>
+    <script>
 
+      fetch('../home/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+        </script>
+  </footer>
 </body>
 </html>
