@@ -58,6 +58,8 @@ const trips = [
         startDate: "2026-04-03",
         endDate: "2026-04-05",
         details: "Spend a delightful weekend exploring the heart of Paris, combining culture, food, and relaxation.",
+        createdBy: "jakeshane",
+        participants: 5,
         img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
     },
     {
@@ -68,6 +70,8 @@ const trips = [
         startDate: "2026-05-10",
         endDate: "2026-05-14",
         details: "Experience the breathtaking natural beauty of Norway with an adventurous hiking trip around Bergen.",
+        createdBy: "adventuretoursco.",
+        participants: 8,
         img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
     },
     {
@@ -78,6 +82,8 @@ const trips = [
         startDate: "2026-06-20",
         endDate: "2026-06-30",
         details: "Dive into the rich history and vibrant culture of Rome with this immersive cultural tour.",
+        createdBy: "mirandacooper",
+        participants: 12,
         img: "https://images.unsplash.com/photo-1509057199576-632a47484ece?auto=format&fit=crop&w=600&q=80"
     }
 ];
@@ -122,7 +128,10 @@ filteredTrips.forEach(trip => {
             `&budget=${encodeURIComponent(trip.budget)}` +
             `&start=${encodeURIComponent(trip.startDate)}` +
             `&end=${encodeURIComponent(trip.endDate)}` +
-            `&details=${encodeURIComponent(trip.details)}`;
+            `&details=${encodeURIComponent(trip.details)}` +
+            `&createdBy=${encodeURIComponent(trip.createdBy)}`+
+            `&participants=${encodeURIComponent(trip.participants)}`
+            ;
         window.location.href = url;
     });
 });

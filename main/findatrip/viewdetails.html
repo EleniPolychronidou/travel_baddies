@@ -35,6 +35,8 @@
     <p><strong>Budget:</strong> <span id="tripBudget"></span></p>
     <p><strong>Dates:</strong> <span id="tripDates"></span></p>
     <p><strong>Details:</strong> <span id="tripDetails"></span></p>
+    <p><strong>Created by:</strong> <span id="tripCreator"></span></p>
+    <p><strong>Participants so far:</strong> <span id="tripParticipants"></span></p>
 
     <!-- Κουμπί Back -->
     <button class="back-btn" onclick="history.back()">← Back</button>
@@ -53,6 +55,8 @@ const budget = params.get("budget");
 const start = params.get("start");
 const end = params.get("end");
 const details = params.get("details");
+const createdBy = params.get("createdBy");
+const participants = params.get("participants");
 
 document.getElementById("tripTitle").textContent = title;
 document.getElementById("tripDestination").textContent = destination;
@@ -60,6 +64,8 @@ document.getElementById("tripPurpose").textContent = purpose;
 document.getElementById("tripBudget").textContent = budget;
 document.getElementById("tripDates").textContent = `${start} to ${end}`;
 document.getElementById("tripDetails").textContent = details;
+document.getElementById("tripCreator").textContent = params.get("createdBy");
+document.getElementById("tripParticipants").textContent = params.get("participants");
 
 const images = {
     "Weekend in Paris": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80",
