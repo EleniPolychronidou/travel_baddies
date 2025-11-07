@@ -1,40 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="viewdetails.css" />
-<title>Trip Details</title>
-<header>
-<script>
-fetch('../home/header.html')
-.then(r => r.text())
-.then(data => document.querySelector('header').innerHTML = data)
-.catch(err => console.error('Error loading header:', err));
-</script>
-</header>
-
+    <meta charset="UTF-8">
+    <title>Trip Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f3f3f3; margin: 0; padding: 20px; }
+        .details-card { max-width: 500px; margin: 0 auto; background: white; border-radius: 12px; padding: 20px; box-shadow: 0px 4px 10px rgba(0,0,0,0.15); }
+        .details-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 15px; }
+        h2 { margin-top: 0; }
+        .back-btn, .join-btn { margin-top: 10px; padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; color: white; }
+        .back-btn { background-color: #546D79; }
+        .back-btn:hover { background-color: #546D79; }
+        .join-btn { background-color: #546D79; }
+        .join-btn:hover { background-color: #546D79; }
+    </style>
+</head>
 <body>
+<header>
+      <script>
+        fetch("../home/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("header").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      </script>
+    </header>
 
-<div class="trip-details-container">
-  <h2>Weekend in Paris</h2>
-  <p><strong>Destination:</strong> Paris, France</p>
-  <p><strong>Purpose:</strong> Recreation</p>
-  <p><strong>Budget:</strong> 400€</p>
-  <p><strong>Date:</strong> 3-5 April 2026</p>
-  <p><strong>Description:</strong> Spend a delightful weekend exploring the heart of Paris, combining culture, food, and relaxation. Begin with a visit to the Eiffel Tower, where you can enjoy stunning panoramic views of the city. Wander through the Louvre Museum and admire masterpieces like the Mona Lisa and the Venus de Milo. Take a stroll along the Seine River, exploring historic bridges and picturesque riverside spots, and stop at local cafés to enjoy freshly baked pastries, coffee, or a light lunch. Discover charming streets and boutique shops in neighborhoods like Le Marais, perfect for shopping or simply soaking up the Parisian atmosphere. End your weekend with a memorable dinner near the illuminated Eiffel Tower, enjoying fine French cuisine while experiencing the city’s romantic ambiance. This trip offers the perfect balance of sightseeing, culinary experiences, and leisurely moments, making it ideal for first-time visitors and lovers of Paris alike..</p>
-  <p><strong>Created by:</strong> Alice Johnson</p>
-  <p><strong>Participants so far:</strong> 12</p>
-  <button class="JoinBtn">Join</button>
-  <button onclick="window.location.href='findaTrip.html'">Back</button>
-  
+<div class="details-card" style="margin-top: 30px;">
+    <img id="tripImage" src="" alt="Trip Image">
+    <h2 id="tripTitle">Loading...</h2>
+    <p><strong>Destination:</strong> <span id="tripDestination"></span></p>
+    <p><strong>Purpose:</strong> <span id="tripPurpose"></span></p>
+    <p><strong>Budget:</strong> <span id="tripBudget"></span></p>
+    <p><strong>Dates:</strong> <span id="tripDates"></span></p>
+    <p><strong>Details:</strong> <span id="tripDetails"></span></p>
+
+    <!-- Κουμπί Back -->
+    <button class="back-btn" onclick="history.back()">← Back</button>
+
+    <!-- Join Group κουμπί -->
+    <button class="join-btn" onclick="joinGroup()">Join Group</button>
 </div>
-<footer>
+
 <script>
-fetch('../home/footer.html')
-.then(r => r.text())
-.then(data => document.querySelector('footer').innerHTML = data)
-.catch(err => console.error('Error loading footer:', err));
+const params = new URLSearchParams(window.location.search);
+
+const title = params.get("title");
+const destination = params.get("destination");
+const purpose = params.get("purpose");
+const budget = params.get("budget");
+const start = params.get("start");
+const end = params.get("end");
+const details = params.get("details");
+
+document.getElementById("tripTitle").textContent = title;
+document.getElementById("tripDestination").textContent = destination;
+document.getElementById("tripPurpose").textContent = purpose;
+document.getElementById("tripBudget").textContent = budget;
+document.getElementById("tripDates").textContent = `${start} to ${end}`;
+document.getElementById("tripDetails").textContent = details;
+
+const images = {
+    "Weekend in Paris": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80",
+    "Hiking in Norway": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+    "Rome Cultural Tour": "https://images.unsplash.com/photo-1509057199576-632a47484ece?auto=format&fit=crop&w=1000&q=80"
+};
+document.getElementById("tripImage").src = images[title] || "default.jpg";
+
+
+function joinGroup() {
+    alert(`You have joined the group for "${title}"!`);
+}
 </script>
+ <footer>
+      <script>
+        fetch("../home/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("footer").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+      </script>
+      
 </footer>
 
 </body>

@@ -249,3 +249,49 @@ body .desc {
                     min-width: 160px;
                 }
 }
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 5px;     
+    justify-content: center;
+    margin-left:800px;
+    margin-right:800px;
+
+}
+
+.filters-compact label {
+    margin: 0;                /* μηδενικά περιθώρια */
+    font-size: 14px;
+    color: #546D79;
+}
+.filters input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #546D79;
+    width: 15%;
+}
+.desc p{
+    text-align: center;
+    margin: 80px;
+    font-weight: bold;            
+    letter-spacing: 0.2px;
+    color: #6d6c6c;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  
+}
+.searchBtn{
+            margin: 5px;       
+            padding: 5px 10px;     
+            background-color: #43555f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            align-items: left;
+            margin-left: 20px;
+            margin-right:2200px ;
+}
+.searchBtn :hover { 
+  background-color:  #43555f; }
+

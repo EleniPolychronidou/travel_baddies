@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2 { text-align: center; margin-top: 20px; color: #546D79; }
+        .results-grid { display: flex; flex-wrap: wrap; gap: 20px; margin: 20px; justify-content: center; }
+        .result-card {
+            border: 1px solid #ccc; border-radius: 10px; overflow: hidden;
+            width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding-bottom: 10px;
+        }
+        .result-card img { width: 100%; height: 180px; object-fit: cover; }
+        .result-card h3 { margin: 10px; }
+        .result-card p { margin: 5px 10px; }
+        .details-btn { margin: 10px; padding: 8px 12px; background-color: #546D79; color: white; border: none; border-radius: 6px; cursor: pointer; }
+        .details-btn:hover { background-color: #43555f; }
+            .back-btn {
+            margin: 5px;       
+            padding: 5px 10px;     
+            background-color: #43555f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            align-items: left;
+            margin-left: 20px;
+            margin-right:2200px ;
+}
+        .back-btn:hover { background-color:  #43555f; }
+    </style>
+</head>
+<body>
+<header>
+      <script>
+        fetch("../home/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("header").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      </script>
+    </header>
+<h2>Search Results</h2>
+
+<button class="back-btn" onclick="window.location.href='findaTrip.html'">← Back</button>
+
+<div class="results-grid" id="resultsGrid"></div>
+
+<script>
+const trips = [
+    {
+        title: "Weekend in Paris",
+        destination: "Paris, France",
+        purpose: "Recreation",
+        budget: "400€",
+        startDate: "2026-04-03",
+        endDate: "2026-04-05",
+        details: "Spend a delightful weekend exploring the heart of Paris, combining culture, food, and relaxation.",
+        img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        title: "Hiking in Norway",
+        destination: "Bergen, Norway",
+        purpose: "Adventure",
+        budget: "650€",
+        startDate: "2026-05-10",
+        endDate: "2026-05-14",
+        details: "Experience the breathtaking natural beauty of Norway with an adventurous hiking trip around Bergen.",
+        img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        title: "Rome Cultural Tour",
+        destination: "Rome, Italy",
+        purpose: "Cultural",
+        budget: "300€",
+        startDate: "2026-06-20",
+        endDate: "2026-06-30",
+        details: "Dive into the rich history and vibrant culture of Rome with this immersive cultural tour.",
+        img: "https://images.unsplash.com/photo-1509057199576-632a47484ece?auto=format&fit=crop&w=600&q=80"
+    }
+];
+
+const resultsGrid = document.getElementById("resultsGrid");
+
+const params = new URLSearchParams(window.location.search);
+const searchDestination = params.get("destination")?.toLowerCase() || "";
+const searchStart = params.get("start") || "";
+const searchEnd = params.get("end") || "";
+
+const filteredTrips = trips.filter(trip => {
+    const matchesDestination = searchDestination ? trip.destination.toLowerCase().includes(searchDestination) : true;
+    const matchesStart = searchStart ? trip.endDate >= searchStart : true;
+    const matchesEnd = searchEnd ? trip.startDate <= searchEnd : true;
+    return matchesDestination && matchesStart && matchesEnd;
+});
+
+if(filteredTrips.length === 0) {
+    resultsGrid.innerHTML = "<p>No trips found for your search.</p>";
+}
+
+filteredTrips.forEach(trip => {
+    const card = document.createElement("div");
+    card.className = "result-card";
+    card.innerHTML = `
+        <img src="${trip.img}" alt="${trip.title}">
+        <h3>${trip.title}</h3>
+        <p><strong>Destination:</strong> ${trip.destination}</p>
+        <p><strong>Date:</strong> ${trip.startDate} to ${trip.endDate}</p>
+        <button class="details-btn" h>View Details</button>
+    `;
+    resultsGrid.appendChild(card);
+
+    const btn = card.querySelector(".details-btn");
+    btn.addEventListener("click", () => {
+        const url =
+            `viewdetails.html?` +
+            `title=${encodeURIComponent(trip.title)}` +
+            `&destination=${encodeURIComponent(trip.destination)}` +
+            `&purpose=${encodeURIComponent(trip.purpose)}` +
+            `&budget=${encodeURIComponent(trip.budget)}` +
+            `&start=${encodeURIComponent(trip.startDate)}` +
+            `&end=${encodeURIComponent(trip.endDate)}` +
+            `&details=${encodeURIComponent(trip.details)}`;
+        window.location.href = url;
+    });
+});
+</script>
+<footer>
+      <script>
+        fetch("../home/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("footer").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+      </script>
+      
+    </footer>
+
+</body>
+</html>
