@@ -6,7 +6,7 @@ form{
   max-width: 1000px;
   width: 80%;
   padding: 20px 15px;
-  background-color: #f9f9f9;
+  background-color: #eee;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   box-sizing: border-box;
@@ -15,15 +15,15 @@ form{
 form input,
 form select,
 form textarea {
-  width: 100%;         /* γεμίζει το form */
-  margin-bottom: 15px; /* μικρά κενά μεταξύ στοιχείων */
+  width: 100%;    
+  margin-bottom: 15px; 
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border:1px solid #546D79;
   box-sizing: border-box;
   width: 100%;
  width: 100%;
-        transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
       
@@ -58,6 +58,7 @@ h2 {
         font-size: 14px;
         transition: border-color 0.3s, box-shadow 0.3s;
         border-color: rgba(255, 255, 255, 0.9);
+        solid: #546D79;
     
     }
 
