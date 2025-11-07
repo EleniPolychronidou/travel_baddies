@@ -51,7 +51,7 @@ fetch('../home/header.html')
 
 <div class="filter-item">
 <label>Budget (max €)</label>
-<input id="filterBudget" type="number" placeholder="300">
+<input id="filterBudget" type="number" placeholder="300" step="50" min="0">
 </div>
 </div>
 
@@ -62,7 +62,8 @@ fetch('../home/header.html')
 <p><strong>Destination:</strong> Paris, France</p>
 <p><strong>Purpose:</strong> Recreation</p>
 <p><strong>Budget:</strong> 400€</p>
-<button class="detailsBtn">View Details</button>
+<p><strong>Date:</strong> 3-5 April 2026</p>
+<button class="detailsBtn" onclick="window.location.href='viewdetails.html'">View Details</button>
 </div>
 
 
@@ -71,7 +72,8 @@ fetch('../home/header.html')
 <p><strong>Destination:</strong> Bergen, Norway</p>
 <p><strong>Purpose:</strong> Adventure</p>
 <p><strong>Budget:</strong> 650€</p>
-<button class="detailsBtn">View Details</button>
+<p><strong>Date:</strong> 10–14 May 2026</p>
+<button class="detailsBtn" onclick="window.location.href='viewdetailsnorway.html'">View Details</button>
 </div>
 
 
@@ -80,7 +82,8 @@ fetch('../home/header.html')
 <p><strong>Destination:</strong> Rome, Italy</p>
 <p><strong>Purpose:</strong> Cultural</p>
 <p><strong>Budget:</strong> 300€</p>
-<button class="detailsBtn">View Details</button>
+<p><strong>Date:</strong> 20–30 June 2026</p>
+<button class="detailsBtn" onclick="window.location.href='viewdetailsrome.html'">View Details</button>
 </div>
 </div>
 </main>
