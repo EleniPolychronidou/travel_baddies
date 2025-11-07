@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Find a Trip</title>
     <link rel="stylesheet" href="../styleforcss/style.css" />
+    <link rel="stylesheet" href="findatrip.css" />
   </head>
 
   <body>
@@ -18,7 +19,7 @@
       </script>
     </header>
 
-    <p>
+    <p class="desc">
       Are your suitcases ready? Let the adventure begin! <br />
       These trips have been suggested by fellow travelers. <br />Choose the one
       that best matches your interests and start your adventure!
@@ -33,6 +34,83 @@
         <option value="">Type</option>
       </select>
     </div>
+
+<!-- Popular Destinations Section -->
+<section class="popular-destinations">
+    <h2> Popular Destinations</h2>
+    <div class="destinations-grid">
+        <div class="destination-card">
+            <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+            <h3>Greece</h3>
+            <p>Island hopping & ancient history</p>
+            <span class="trips-count">24 trips available</span>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+            <h3>Italy</h3>
+            <p>Food, art & romantic cities</p>
+            <span class="trips-count">18 trips available</span>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1543785734-4b6e564642f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+            <h3>Spain</h3>
+            <p>Beaches & vibrant culture</p>
+            <span class="trips-count">22 trips available</span>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="France">
+            </div>
+            <h3>France</h3>
+            <p>Romance, wine & landmarks</p>
+            <span class="trips-count">20 trips available</span>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+            <h3>Portugal</h3>
+            <p>Coastal charm & heritage</p>
+            <span class="trips-count">15 trips available</span>
+        </div>
+    </div>
+</section>
+<!-- Trip Types Section -->
+<section class="trip-types">
+    <h2> Browse by Trip Type</h2>
+    <div class="types-grid">
+        <div class="type-card adventure">
+            <h3>Adventure</h3>
+            <p>Hiking, camping & outdoor activities</p>
+        </div>
+        <div class="type-card cultural">
+            <h3>Cultural</h3>
+            <p>Museums, history & local experiences</p>
+        </div>
+        <div class="type-card beach">
+            <h3>Beach</h3>
+            <p>Relaxing coastal getaways</p>
+        </div>
+        <div class="type-card city">
+            <h3>City Breaks</h3>
+            <p>Urban exploration & nightlife</p>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Stats -->
+<section class="quick-stats">
+    <div class="stat">
+        <span class="stat-number">1,258</span>
+        <span class="stat-label">Trips Available</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">324</span>
+        <span class="stat-label">Active Travelers</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">47</span>
+        <span class="stat-label">Countries</span>
+    </div>
+</section>
 
     <footer>
       <script>
